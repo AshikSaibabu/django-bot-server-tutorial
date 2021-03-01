@@ -1,0 +1,21 @@
+<h2>User Stats</h2>
+<p><a href="{% url 'chat' %}">Chat</a>
+
+    <br><a href="{% url 'logout' %}">Log Out</a>
+</p>
+<table>
+    <tr>
+        <th>User Name</th>
+        <th>Fat</th>
+        <th>Dumb</th>
+        <th>Stupid</th>
+    </tr>
+    {% for item in objs %}
+    <tr>
+        <td>{{ item.user }}</td>
+        <td>{{ item.fat_count }}</td>
+        <td>{{ item.dumb_count }}</td>
+        <td>{{ item.stupid_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
